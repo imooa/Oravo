@@ -52,6 +52,7 @@ Create an `.env` file with the following:
 
 ```bash
 DATABASE_URL=connection-url
+DISABLE_REGISTRATION=true  # Set to false to allow public user registration
 ```
 
 The connection URL format:
@@ -98,6 +99,18 @@ Or with MySQL support:
 ```bash
 docker pull docker.imoogleai.xyz/oravo/oravo:mysql-latest
 ```
+
+---
+
+## 👥 User Registration
+
+By default, user registration is disabled for security. To enable public user registration:
+
+1. Set `DISABLE_REGISTRATION=false` in your environment variables
+2. Users can then sign up at `/signup`
+3. New users are created with standard 'user' role permissions
+
+For production environments, consider keeping registration disabled and creating users manually through the admin interface.
 
 ---
 

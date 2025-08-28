@@ -7,6 +7,7 @@ import {
   PasswordField,
   SubmitButton,
   Icon,
+  Text,
 } from 'react-basics';
 import { useRouter } from 'next/navigation';
 import { useApi, useMessages } from '@/components/hooks';
@@ -70,6 +71,14 @@ export function LoginForm() {
           </SubmitButton>
         </FormButtons>
       </Form>
+      <div className={styles.signup}>
+        <Text>
+          Don't have an account?{' '}
+          <a href="/signup" className={styles.signupLink}>
+            Sign up
+          </a>
+        </Text>
+      </div>
     </div>
   );
 }
