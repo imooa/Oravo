@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Form,
   FormRow,
@@ -14,14 +16,14 @@ import { useApi, useMessages } from '@/components/hooks';
 import { setUser } from '@/store/app';
 import { setClientAuthToken } from '@/lib/client';
 import Logo from '@/assets/logo.svg';
-import styles from './LoginForm.module.css';
+import styles from './SignupForm.module.css';
 
-export function LoginForm() {
+export function SignupForm() {
   const { formatMessage, labels, getMessage } = useMessages();
   const router = useRouter();
   const { post, useMutation } = useApi();
   const { mutate, error, isPending } = useMutation({
-    mutationFn: (data: any) => post('/auth/login', data),
+    mutationFn: (data: any) => post('/auth/signup', data),
   });
 
   const handleSubmit = async (data: any) => {
@@ -36,28 +38,53 @@ export function LoginForm() {
   };
 
   return (
-    <div className={styles.login}>
+    <div className={styles.signup}>
       <Icon className={styles.icon} size="xl">
         <Logo />
       </Icon>
-      <div className={styles.title}>Oravo</div>
+      <div className={styles.title}>Sign up for Oravo</div>
       <Form className={styles.form} onSubmit={handleSubmit} error={getMessage(error)}>
         <FormRow label={formatMessage(labels.username)}>
           <FormInput
             data-test="input-username"
             name="username"
-            rules={{ required: formatMessage(labels.required) }}
+            rules={{ 
+              required: formatMessage(labels.required),
+              minLength: {
+                value: 3,
+                message: 'Username must be at least 3 characters'
+              }
+            }}
           >
-            <TextField autoComplete="off" />
+            <TextField autoComplete="username" />
           </FormInput>
         </FormRow>
         <FormRow label={formatMessage(labels.password)}>
           <FormInput
             data-test="input-password"
             name="password"
-            rules={{ required: formatMessage(labels.required) }}
+            rules={{ 
+              required: formatMessage(labels.required),
+              minLength: {
+                value: 6,
+                message: 'Password must be at least 6 characters'
+              }
+            }}
           >
-            <PasswordField />
+            <PasswordField autoComplete="new-password" />
+          </FormInput>
+        </FormRow>
+        <FormRow label="Confirm Password">
+          <FormInput
+            data-test="input-confirm-password"
+            name="confirmPassword"
+            rules={{ 
+              required: formatMessage(labels.required),
+              validate: (value: string, formValues: any) => 
+                value === formValues.password || 'Passwords do not match'
+            }}
+          >
+            <PasswordField autoComplete="new-password" />
           </FormInput>
         </FormRow>
         <FormButtons>
@@ -67,15 +94,15 @@ export function LoginForm() {
             variant="primary"
             disabled={isPending}
           >
-            {formatMessage(labels.login)}
+            Sign Up
           </SubmitButton>
         </FormButtons>
       </Form>
-      <div className={styles.signupLink}>
-        Don't have an account? <Link href="/signup">Sign up here</Link>
+      <div className={styles.loginLink}>
+        Already have an account? <Link href="/login">Login here</Link>
       </div>
     </div>
   );
 }
 
-export default LoginForm;
+export default SignupForm;
