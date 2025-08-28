@@ -7,10 +7,10 @@ export const THEME_CONFIG = 'oravo.theme';
 export const DASHBOARD_CONFIG = 'oravo.dashboard';
 export const VERSION_CHECK = 'oravo.version-check';
 export const SHARE_TOKEN_HEADER = 'x-oravo-share-token';
-export const HOMEPAGE_URL = 'https://oravo.com';
+export const HOMEPAGE_URL = 'https://analytics.imoogleai.xyz';
 export const REPO_URL = 'https://github.com/oravo/oravo';
-export const UPDATES_URL = 'https://api.oravo.com/v1/updates';
-export const TELEMETRY_PIXEL = 'https://i.oravo.com/a.png';
+export const UPDATES_URL = 'https://analytics.imoogleai.xyz/api/v1/updates';
+export const TELEMETRY_PIXEL = 'https://analytics.imoogleai.xyz/a.png';
 export const FAVICON_URL = 'https://icons.duckduckgo.com/ip3/{{domain}}.ico';
 
 export const DEFAULT_LOCALE = 'en-US';

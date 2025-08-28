@@ -2,7 +2,7 @@
   "name": "Oravo",
   "description": "Oravo is a simple, fast, website analytics platform with elegant black and white design.",
   "keywords": ["analytics", "charts", "statistics", "web-analytics"],
-  "website": "https://oravo.com",
+  "website": "https://analytics.imoogleai.xyz",
   "repository": "https://github.com/oravo/oravo",
   "addons": ["heroku-postgresql"],
   "env": {

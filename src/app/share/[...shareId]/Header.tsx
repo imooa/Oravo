@@ -10,7 +10,7 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div>
-        <Link href="https://oravo.com" target="_blank" className={styles.title}>
+        <Link href="https://analytics.imoogleai.xyz" target="_blank" className={styles.title}>
           <Icon size="lg">
             <Icons.Logo />
           </Icon>

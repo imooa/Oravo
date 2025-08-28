@@ -3,7 +3,7 @@ export type TrackedProperties = {
    * Hostname of server
    *
    * @description extracted from `window.location.hostname`
-   * @example 'analytics.oravo.com'
+   * @example 'analytics.imoogleai.xyz'
    */
   hostname: string;
 
@@ -19,7 +19,7 @@ export type TrackedProperties = {
    * Page referrer
    *
    * @description extracted from `window.navigator.language`
-   * @example 'https://analytics.oravo.com/docs/getting-started'
+   * @example 'https://analytics.imoogleai.xyz/docs/getting-started'
    */
   referrer: string;
 

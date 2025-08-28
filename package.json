@@ -2,9 +2,9 @@
   "name": "oravo",
   "version": "2.19.0",
   "description": "A modern, privacy-focused analytics platform with black and white design.",
-  "author": "Oravo Analytics <hello@oravo.com>",
+  "author": "Oravo Analytics <hello@imoogleai.xyz>",
   "license": "MIT",
-  "homepage": "https://oravo.com",
+  "homepage": "https://analytics.imoogleai.xyz",
   "repository": {
     "type": "git",
     "url": "https://github.com/oravo/oravo.git"

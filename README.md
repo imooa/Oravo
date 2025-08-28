@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://oravo.com/images/oravo-logo.png" alt="Oravo Logo" width="100">
+  <img src="https://analytics.imoogleai.xyz/images/oravo-logo.png" alt="Oravo Logo" width="100">
 </p>
 
 <h1 align="center">Oravo</h1>
@@ -27,7 +27,7 @@
 
 ## 🚀 Getting Started
 
-A detailed getting started guide can be found at [oravo.com/docs](https://oravo.com/docs/).
+A detailed getting started guide can be found at [analytics.imoogleai.xyz/docs](https://analytics.imoogleai.xyz/docs/).
 
 ---
 
@@ -90,13 +90,13 @@ docker compose up -d
 Alternatively, to pull just the Oravo Docker image with PostgreSQL support:
 
 ```bash
-docker pull docker.oravo.com/oravo/oravo:postgresql-latest
+docker pull docker.imoogleai.xyz/oravo/oravo:postgresql-latest
 ```
 
 Or with MySQL support:
 
 ```bash
-docker pull docker.oravo.com/oravo/oravo:mysql-latest
+docker pull docker.imoogleai.xyz/oravo/oravo:mysql-latest
 ```
 
 ---

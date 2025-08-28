@@ -2,7 +2,7 @@
   "name": "@oravo/components",
   "version": "0.1.0",
   "description": "Oravo React components.",
-  "author": "Oravo Team <team@oravo.com>",
+  "author": "Oravo Team <team@imoogleai.xyz>",
   "license": "MIT",
   "type": "module",
   "main": "./index.js",
