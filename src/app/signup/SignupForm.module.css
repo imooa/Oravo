@@ -1,4 +1,4 @@
-.login {
+.signup {
   width: 400px;
   margin: auto;
   transform: translateY(-25%);
@@ -32,17 +32,17 @@
   justify-content: center;
 }
 
-.signupLink {
+.loginLink {
   text-align: center;
   margin-top: 20px;
   color: #666;
 }
 
-.signupLink a {
+.loginLink a {
   color: #007bff;
   text-decoration: none;
 }
 
-.signupLink a:hover {
+.loginLink a:hover {
   text-decoration: underline;
 }
