@@ -22,7 +22,7 @@ const contentSecurityPolicy = [
   `img-src * data:`,
   `script-src 'self' 'unsafe-eval' 'unsafe-inline'`,
   `style-src 'self' 'unsafe-inline'`,
-  `connect-src 'self' api.umami.is cloud.umami.is`,
+  `connect-src 'self' analytics.imoogleai.xyz`,
   `frame-ancestors 'self' ${frameAncestors}`,
 ];
 
@@ -174,6 +174,13 @@ if (cloudMode && cloudUrl) {
     destination: cloudUrl,
     permanent: false,
   });
+
+  // Don't redirect signup page in cloud mode - allow local registration
+  // redirects.push({
+  //   source: '/signup',
+  //   destination: `${cloudUrl}/signup`,
+  //   permanent: false,
+  // });
 }
 
 /** @type {import('next').NextConfig} */
