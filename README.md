@@ -52,8 +52,15 @@ Create an `.env` file with the following:
 
 ```bash
 DATABASE_URL=connection-url
-DISABLE_REGISTRATION=true  # Set to false to allow public user registration
+DISABLE_REGISTRATION=false  # Set to false to allow public user registration
+APP_SECRET=your-random-secret-key
 ```
+
+**Important for Vercel/Production deployment:**
+Make sure to set these environment variables in your deployment platform:
+- `DISABLE_REGISTRATION=false` (to enable user registration)
+- `DATABASE_URL=your-database-connection-string`
+- `APP_SECRET=your-secure-random-string`
 
 The connection URL format:
 
