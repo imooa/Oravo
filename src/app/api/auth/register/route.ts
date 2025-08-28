@@ -11,7 +11,26 @@ export async function POST(request: Request) {
   const registrationEnabled = process.env.DISABLE_REGISTRATION !== 'true';
   
   if (!registrationEnabled) {
-    return methodNotAllowed('Public registration is disabled');
+    return json({ error: 'Public registration is disabled', registrationEnabled: false }, { status: 403 });
+  }
+
+  // Handle both JSON and form data
+  let body: any;
+  const contentType = request.headers.get('content-type') || '';
+  
+  try {
+    if (contentType.includes('application/json')) {
+      body = await request.json();
+    } else {
+      const formData = await request.formData();
+      body = {
+        username: formData.get('username'),
+        password: formData.get('password'),
+        email: formData.get('email'),
+      };
+    }
+  } catch (err) {
+    return badRequest('Invalid request format');
   }
 
   const schema = z.object({
@@ -20,13 +39,13 @@ export async function POST(request: Request) {
     email: z.string().email().optional(),
   });
 
-  const { body, error } = await parseRequest(request, schema, { skipAuth: true });
-
-  if (error) {
-    return error();
+  const validation = schema.safeParse(body);
+  
+  if (!validation.success) {
+    return badRequest(`Validation error: ${validation.error.errors.map(e => e.message).join(', ')}`);
   }
 
-  const { username, password, email } = body;
+  const { username, password, email } = validation.data;
 
   // Check if user already exists
   const existingUser = await getUserByUsername(username, { showDeleted: true });
