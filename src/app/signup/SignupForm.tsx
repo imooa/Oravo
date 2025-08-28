@@ -38,7 +38,20 @@ export function SignupForm() {
   };
 
   return (
-    <div className={styles.signup}>
+    <div 
+      className={styles.signup}
+      style={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '20px',
+        maxWidth: '400px',
+        margin: '0 auto',
+        boxSizing: 'border-box'
+      }}
+    >
       <Icon className={styles.icon} size="xl">
         <Logo />
       </Icon>

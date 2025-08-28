@@ -104,3 +104,18 @@ main::-webkit-scrollbar-track {
   --dark800: #b4b4b4;
   --dark900: #eeeeee;
 }
+
+/* Force responsive signup form styles */
+@media (max-width: 768px) {
+  [class*="signup"] {
+    min-height: 100vh !important;
+    padding-top: 10vh !important;
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 480px) {
+  [class*="signup"] {
+    padding-top: 8vh !important;
+  }
+}
