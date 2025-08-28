@@ -1,30 +1,93 @@
 .signup {
-  width: 400px;
-  margin: auto;
-  transform: translateY(-25%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 300px;
   margin: 0 auto;
-  width: 300px;
 }
 
 .title {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
-  margin: 30px 0;
+  margin: 20px 0 30px 0;
+  color: inherit;
 }
 
 .icon {
   width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .icon svg {
   width: 32px;
   height: 32px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .signup {
+    padding: 15px;
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 10vh;
+  }
+  
+  .form {
+    max-width: 280px;
+  }
+  
+  .title {
+    font-size: 20px;
+    margin: 15px 0 25px 0;
+  }
+  
+  .icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup {
+    padding: 10px;
+    padding-top: 8vh;
+  }
+  
+  .form {
+    max-width: 100%;
+    min-width: 260px;
+  }
+  
+  .title {
+    font-size: 18px;
+    margin: 10px 0 20px 0;
+  }
+}
+
+/* Ensure proper spacing on very small screens */
+@media (max-height: 600px) {
+  .signup {
+    justify-content: flex-start;
+    padding-top: 5vh;
+  }
+  
+  .title {
+    margin: 10px 0 20px 0;
+  }
 }
 
 .button {
