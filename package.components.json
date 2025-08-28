@@ -1,8 +1,8 @@
 {
-  "name": "@umami/components",
+  "name": "@oravo/components",
   "version": "0.1.0",
-  "description": "Umami React components.",
-  "author": "Mike Cao <mike@mikecao.com>",
+  "description": "Oravo React components.",
+  "author": "Oravo Team <team@imoogleai.xyz>",
   "license": "MIT",
   "type": "module",
   "main": "./index.js",

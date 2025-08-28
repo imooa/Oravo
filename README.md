@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://content.umami.is/website/images/umami-logo.png" alt="Umami Logo" width="100">
+  <img src="https://analytics.imoogleai.xyz/images/oravo-logo.png" alt="Oravo Logo" width="100">
 </p>
 
-<h1 align="center">Umami</h1>
+<h1 align="center">Oravo</h1>
 
 <p align="center">
-  <i>Umami is a simple, fast, privacy-focused alternative to Google Analytics.</i>
+  <i>Oravo is a simple, fast, privacy-focused analytics platform with elegant black and white design.</i>
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 
 ## 🚀 Getting Started
 
-A detailed getting started guide can be found at [umami.is/docs](https://umami.is/docs/).
+A detailed getting started guide can be found at [analytics.imoogleai.xyz/docs](https://analytics.imoogleai.xyz/docs/).
 
 ---
 
@@ -41,12 +41,12 @@ A detailed getting started guide can be found at [umami.is/docs](https://umami.i
 ### Get the Source Code and Install Packages
 
 ```bash
-git clone https://github.com/umami-software/umami.git
-cd umami
+git clone https://github.com/oravo/oravo.git
+cd oravo
 pnpm install
 ```
 
-### Configure Umami
+### Configure Oravo
 
 Create an `.env` file with the following:
 
@@ -67,7 +67,7 @@ mysql://username:mypassword@localhost:3306/mydb
 pnpm run build
 ```
 
-_The build step will create tables in your database if you are installing for the first time. It will also create a login user with username **admin** and password **umami**._
+_The build step will create tables in your database if you are installing for the first time. It will also create a login user with username **admin** and password **oravo**._
 
 ### Start the Application
 
@@ -81,22 +81,22 @@ _By default, this will launch the application on `http://localhost:3000`. You wi
 
 ## 🐳 Installing with Docker
 
-To build the Umami container and start up a Postgres database, run:
+To build the Oravo container and start up a Postgres database, run:
 
 ```bash
 docker compose up -d
 ```
 
-Alternatively, to pull just the Umami Docker image with PostgreSQL support:
+Alternatively, to pull just the Oravo Docker image with PostgreSQL support:
 
 ```bash
-docker pull docker.umami.is/umami-software/umami:postgresql-latest
+docker pull docker.imoogleai.xyz/oravo/oravo:postgresql-latest
 ```
 
 Or with MySQL support:
 
 ```bash
-docker pull docker.umami.is/umami-software/umami:mysql-latest
+docker pull docker.imoogleai.xyz/oravo/oravo:mysql-latest
 ```
 
 ---
